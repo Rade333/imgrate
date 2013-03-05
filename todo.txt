@@ -1,0 +1,15 @@
+ImgRate 0.1 todo
+****************
+
+- Database + table creation script
+- Read files from folder and add to database // DONE
+- Multi-upload script: Upload image, resize and add to database
+- Write algorithm to choose which images are placed next to each other (not just randomly) ELO RATING SYSTEM
+- ALT: Save data to db that over which image one image was voted better
+- Add user statistic
+- Create layout
+- Save user data
+- Put cookie on users
+
+ALGORITHM
+http://shotgunapproach.wordpress.com/2010/10/08/the-algorithm-for-facemash-in-the-social-network/
