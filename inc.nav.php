@@ -1,14 +1,20 @@
-<div class="nav">
-  <a href="index.php" <?php print currentPage('index'); ?>>Rate</a> | 
-  <?php if (checkLogin()): ?>
-  <a href="upload.php" <?php print currentPage('upload'); ?>>Upload</a> |
-  <?php endif; ?>
-  <a href="stats.php" <?php print currentPage('stats'); ?>>Stats</a> |
-  <?php if (!checkLogin()): ?>
-  <a href="login.php" <?php print currentPage('login'); ?>>Log in</a>
-  <?php endif; ?>
-  <?php if (checkLogin()): ?>
-  <a href="index.php?do=logout">Log out</a>
-  <?php endif; ?>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">      
+      <ul class="nav">
+        <li <?php print currentPage('index'); ?>><a href="index.php">Rate</a></li>
+        <?php if (checkLogin()): ?>
+        <li <?php print currentPage('upload'); ?>><a href="upload.php">Upload</a></li>
+        <?php endif; ?>
+        <li <?php print currentPage('stats'); ?>><a href="stats.php">Stats</a></li>
+        <?php if (!checkLogin()): ?>
+        <li <?php print currentPage('login'); ?>><a href="login.php">Log in</a></li>
+        <?php endif; ?>
+        <?php if (checkLogin()): ?>
+        <li><a href="index.php?do=logout">Log out</a></li>
+        <?php endif; ?>
+      </ul>
+    </div>
+  </div>
 </div>
 

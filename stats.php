@@ -48,13 +48,13 @@ if ($do == 'delete') {
   </head>
   <body>
     <?php include 'inc.message.php'; ?>
-    <div class="container">
+    <div class="container-fluid text-center">
     <?php include 'inc.nav.php'; ?>
     <h1 class="title">Stats</h1>
     <div class="description">The rating of the images are calculated using the <a href="http://en.wikipedia.org/wiki/Elo_rating_system" title="Elo rating system">Elo rating system</a>.</div>
     <div class="scores">
       <?php print showStats(); ?>
-      <div class="clear"></div>
+      <div class="clearfix"></div>
     </div>
     
     <?php include 'inc.footer.php'; ?>

@@ -33,7 +33,7 @@ else {
   </head>
   <body>
     <?php include 'inc.message.php'; ?>
-    <div class="container login">
+    <div class="container-fluid login text-center">
       <?php include 'inc.nav.php'; ?>
       <h1 class="title">Log in</h1>
       <?php if (checkLogin()) { ?>

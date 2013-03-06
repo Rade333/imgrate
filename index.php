@@ -52,23 +52,27 @@ if ($do == 'delete') {
   </head>
   <body>
     <?php include 'inc.message.php'; ?>
-    <div class="container front">
-    <?php include 'inc.nav.php'; ?>
-      <?php $img = selectImages(); ?>
-      <h1 class="title">Rate</h1>
-      <div class="description">Below you see two randomly selected images. Choose which you like better by clicking the image. On the Stats-page you can find the ratings of the images.</div>
-      <div class="images">
-        <div class="images region">
-        <div class="img first">
-          <a href="?do=vote&win=<?php print $img[0]->id; ?>&lose=<?php print $img[1]->id; ?>" title="Vote this image">
-            <img src="images/<?php print $img[0]->src; ?>" />
-          </a>
-        </div>
-        <div class="img last">
-          <a href="?do=vote&win=<?php print $img[1]->id; ?>&lose=<?php print $img[0]->id; ?>" title="Vote this image">
-            <img src="images/<?php print $img[1]->src; ?>" />
-          </a>
-        </div>
+    <div class="container-fluid front text-center">
+      <div class="row-fluid">
+        <div class="span12">
+        <?php include 'inc.nav.php'; ?>
+          <?php $img = selectImages(); ?>
+          <h1 class="title">Rate</h1>
+          <p>Below you see two randomly selected images. Choose which you like better by clicking the image. On the Stats-page you can find the ratings of the images.</p>
+          <div class="images">
+            <div class="images region">
+            <div class="img first">
+              <a href="?do=vote&win=<?php print $img[0]->id; ?>&lose=<?php print $img[1]->id; ?>" title="Vote this image">
+                <img src="images/<?php print $img[0]->src; ?>" />
+              </a>
+            </div>
+            <div class="img last">
+              <a href="?do=vote&win=<?php print $img[1]->id; ?>&lose=<?php print $img[0]->id; ?>" title="Vote this image">
+                <img src="images/<?php print $img[1]->src; ?>" />
+              </a>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

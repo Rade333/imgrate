@@ -1,23 +1,32 @@
-@import "html-reset.css";
+/* Large desktop */
+@media (min-width: 1200px) {
+  
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
 
-body {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 10px;
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
 }
 
-.clear {
-  display: block;
-  clear: both;
+/* Center navbar links */
+.navbar .nav {
+    float: none;
+    text-align: center;
 }
 
-.container {
-  text-align: center;
-}
-
-
-.description {
-  margin: 1em 0;
+.navbar .nav > li {
+    float: none;
+    display: inline-block;
 }
 
 .message {

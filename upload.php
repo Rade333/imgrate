@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
   </head>
   <body>
     <?php include 'inc.message.php'; ?>
-    <div class="container upload">
+    <div class="container-fluid upload text-center">
       <?php include 'inc.nav.php'; ?>
       <h1 class="title">Upload</h1>
       <div class="description">Upload an image to be rated. Supported file formats are jpg, jpeg, png and gif.</div>
