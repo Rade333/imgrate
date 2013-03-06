@@ -29,87 +29,8 @@
     display: inline-block;
 }
 
-.message {
-  display: block;
-  padding: 5px;
-  width: 50%;
-  margin: 0 auto;
-  font-weight: bold;
-  font-size: 0.85em;
-  border-width: 2px;
-  border-style: solid;
-}
-
-.message .close {
-  float: right;
-  font-size: 0.9em;
-  font-weight: normal;
-  color: #aaa;
-  cursor: pointer;
-}
-
-.message.neutral {
-  border-color: #aaa;
-  background: #eee;
-}
-
-.message.good {
-  border-color: #00cc00;
-  background: #ccffcc;
-}
-
-.message.warning {
-  border-color: #ff6666;
-  background: #ffcccc;
-}
-
-.nav {
-  margin: 1em 0;
-}
-
-.images {
-  background: url('layout/images-bg.png') no-repeat center center;
-}
-
-.images .region {
-  padding: 25px 0;
-}
-
-.img {
-  display: inline-block;
+.fixed-height {
   height: 150px;
-  width: 40%;
-}
-
-.img img {
-  border: 1px solid #aaa;
-  height: 150px;
-}
-
-.img.first {
-  margin-right: 8px;
-}
-
-.img.first img {
-  float: right;
-}
-
-.img.first:hover,
-.img.first img:hover {
-  background: url('layout/vote-this-first-bg.png') no-repeat left center;
-}
-
-.img.last {
-  margin-left: 8px;
-}
-
-.img.last img {
-  float: left;
-}
-
-.img.last:hover,
-.img.last img:hover {
-  background: url('layout/vote-this-last-bg.png') no-repeat right center;
 }
 
 div.scores {

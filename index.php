@@ -60,20 +60,20 @@ if ($do == 'delete') {
           <?php $img = selectImages(); ?>
           <h1 class="title">Rate</h1>
           <p>Below you see two randomly selected images. Choose which you like better by clicking the image. On the Stats-page you can find the ratings of the images.</p>
-          <div class="images">
-            <div class="images region">
-            <div class="img first">
-              <a href="?do=vote&win=<?php print $img[0]->id; ?>&lose=<?php print $img[1]->id; ?>" title="Vote this image">
-                <img src="images/<?php print $img[0]->src; ?>" />
+          
+          <ul class="thumbnails">
+            <li class="span6">
+              <a href="?do=vote&win=<?php print $img[0]->id; ?>&lose=<?php print $img[1]->id; ?>" title="Vote this image" class="thumbnail">
+                <img src="images/<?php print $img[0]->src; ?>" class="fixed-height">
               </a>
-            </div>
-            <div class="img last">
-              <a href="?do=vote&win=<?php print $img[1]->id; ?>&lose=<?php print $img[0]->id; ?>" title="Vote this image">
-                <img src="images/<?php print $img[1]->src; ?>" />
+            </li>
+            <li class="span6">
+              <a href="?do=vote&win=<?php print $img[1]->id; ?>&lose=<?php print $img[0]->id; ?>" title="Vote this image" class="thumbnail">
+                <img src="images/<?php print $img[1]->src; ?>" class="fixed-height">
               </a>
-            </div>
-            </div>
-          </div>
+            </li>
+          </ul>
+          
         </div>
       </div>
     </div>
