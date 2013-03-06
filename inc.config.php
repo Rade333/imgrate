@@ -2,12 +2,9 @@
 // CONFIG
 
 // Database
-// Database
-$config[0] = "radefi_imgrate";
-// Image table
-$config[1] = "tbl_images";
-// Votes table
-$config[2] = "tbl_votes";
+$config[0] = "radefi_imgrate";  // Database
+$config[1] = "tbl_images";      // Image table
+$config[2] = "tbl_votes";       // Votes table
 
 // Variables
 $php_self = $_SERVER['PHP_SELF'];
