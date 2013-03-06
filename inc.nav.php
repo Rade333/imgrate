@@ -1,12 +1,3 @@
-<?php
-function currentPage($page) {
-  $curPage = basename($_SERVER['REQUEST_URI'], '.php');
-  if ($page == $curPage) {
-    $class = 'class="active"';
-  }
-  return $class;
-}
-?>
 <div class="nav">
   <a href="index.php" <?php print currentPage('index'); ?>>Rate</a> | 
   <?php if (checkLogin()): ?>
