@@ -17,13 +17,13 @@ class Message {
   function Message($text, $type = 2) {
     $this->text = $text;
     if ($type == 0) {
-      $this->type = 'good';
+      $this->type = 'alert-success';
     }
     elseif ($type == 1) {
-      $this->type = 'warning';
+      $this->type = 'alert-error';
     }
     else {
-      $this->type = 'neutral';
+      $this->type = '';
     }
   }
 }

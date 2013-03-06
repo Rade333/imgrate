@@ -32,9 +32,9 @@ else {
     <title>Log in | ImgRate</title>
   </head>
   <body>
-    <?php include 'inc.message.php'; ?>
     <div class="container-fluid login text-center">
       <?php include 'inc.nav.php'; ?>
+      <?php include 'inc.message.php'; ?>
       <h1 class="title">Log in</h1>
       <?php if (checkLogin()) { ?>
         <div class="description">You are already logged in.</div>

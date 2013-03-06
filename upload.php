@@ -73,9 +73,9 @@ if (isset($_POST['submit'])) {
     <title>Upload image | ImgRate</title>
   </head>
   <body>
-    <?php include 'inc.message.php'; ?>
     <div class="container-fluid upload text-center">
       <?php include 'inc.nav.php'; ?>
+      <?php include 'inc.message.php'; ?>
       <h1 class="title">Upload</h1>
       <div class="description">Upload an image to be rated. Supported file formats are jpg, jpeg, png and gif.</div>
       <form action="upload.php" method="post" enctype="multipart/form-data">

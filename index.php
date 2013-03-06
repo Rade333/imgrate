@@ -51,11 +51,12 @@ if ($do == 'delete') {
     <title>ImgRate</title>
   </head>
   <body>
-    <?php include 'inc.message.php'; ?>
     <div class="container-fluid front text-center">
       <div class="row-fluid">
         <div class="span12">
         <?php include 'inc.nav.php'; ?>
+        <?php include 'inc.message.php'; ?>
+        
           <?php $img = selectImages(); ?>
           <h1 class="title">Rate</h1>
           <p>Below you see two randomly selected images. Choose which you like better by clicking the image. On the Stats-page you can find the ratings of the images.</p>
