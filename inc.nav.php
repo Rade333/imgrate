@@ -2,7 +2,7 @@
   <div class="navbar-inner">
     <div class="container">
       <nav>     
-        <ul class="nav">
+        <ul class="nav center-list">
           <li <?php print currentPage('index'); ?>><a href="index.php">Rate</a></li>
           <?php if (checkLogin()): ?>
           <li <?php print currentPage('upload'); ?>><a href="upload.php">Upload</a></li>
