@@ -78,11 +78,21 @@ if (isset($_POST['submit'])) {
         <div class="span12">      
           <?php include 'inc.nav.php'; ?>
           <?php include 'inc.message.php'; ?>
-          <h1 class="title">Upload</h1>
-          <div class="description">Upload an image to be rated. Supported file formats are jpg, jpeg, png and gif.</div>
+          <header>
+            <h1 class="title">Upload</h1>
+          </header>
+          <p>Upload an image to be rated. Supported file formats are jpg, jpeg, png and gif.</p>
           <form action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" /><br />
-            <input type="submit" name="submit" value="Upload" />
+            <input type="file" name="file" id="file" style="display:none">
+            <div class="input-append">
+              <input type="text" id="fileText">
+              <a class="btn" onclick="$('input#file').click();">Browse</a>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <button type="submit" name="submit" class="btn btn-primary">Upload</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

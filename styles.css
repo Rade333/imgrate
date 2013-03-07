@@ -39,25 +39,6 @@ ul.center-list > li:first-child {
   /*width: 200px;*/
 }
 
-div.scores {
-  clear: both;
-  margin: 20px 0 0 0;
-  overflow: hidden;
-  text-align: center;
-  padding: 5px;
-}
-
-ul.scores {
-  float: left;
-  position: relative;
-  left: 50%;
-  list-style: none;
-  margin: auto;
-  padding: 0px;
-}
-
-
-
 .score-1 {
   font-size: 1.5em;
 }
@@ -68,12 +49,6 @@ ul.scores {
 
 .score-3 {
   font-size: 1.1em;
-}
-
-.score-break {
-  display: block;
-  border: 0;
-  background: none;
 }
 
 .score img {
@@ -92,8 +67,6 @@ ul.scores {
 .score-3 img {
   height: 110px;
 }
-
-
 
 .delete,
 .rating, 
