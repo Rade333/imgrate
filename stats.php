@@ -47,6 +47,7 @@ if ($do == 'delete') {
             <h1 class="title">Stats</h1>
           </header>
           <p>The rating of the images are calculated using the <a href="http://en.wikipedia.org/wiki/Elo_rating_system" title="Elo rating system">Elo rating system</a>.</p>
+          
           <div class="scores">
             <?php print showStats(); ?>
             <div class="clearfix"></div>

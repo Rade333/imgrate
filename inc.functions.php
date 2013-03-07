@@ -118,23 +118,24 @@ function dbGetImages($query) {
 function showStats() {
   global $config;
   $imgs = dbGetImages("SELECT `id` FROM `$config[1]` ORDER BY `rating` DESC");
+  $count = count($imgs);
 
   $i = 1;
-  print '<ul class="scores">';
+  print '<ul class="thumbnails center-list">';
   foreach ($imgs as $img) {
     if ($i == 4) {
-      print '<li class="score score-break"></li>';
+      print '</ul><ul class="thumbnails center-list">';
     }
     ?>
       <li class="score score-<?php print $i; ?>">
-        <img src="images/<?php print $img->src; ?>" />
-        <?php if (checkLogin()): ?>
-        <span class="delete"><a href="?do=confirmDelete&id=<?php print $img->id; ?>">Delete</a></span>
-        <?php endif; ?>
-        <span class="rating">Rating: <?php print $img->rating; ?></span>
-        <span class="wins"><?php print $img->wins + $img->losses; ?> appearances</span>
-        <!--<span class="wins"><?php print $img->wins; ?> wins</span>
-        <span class="losses"><?php print $img->losses; ?> losses</span>-->
+        <div class="thumbnail">
+          <img src="images/<?php print $img->src; ?>" alt="">
+          <?php if (checkLogin()): ?>
+            <span class="delete"><a href="?do=confirmDelete&id=<?php print $img->id; ?>">Delete</a></span>
+          <?php endif; ?>
+          <span class="rating">Rating: <?php print $img->rating; ?></span>
+          <span class="wins"><?php print $img->wins + $img->losses; ?> appearances</span>
+        </div>
       </li>
     <?php
     $i++;
