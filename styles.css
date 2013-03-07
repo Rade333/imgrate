@@ -109,14 +109,9 @@ ul.scores {
   font-weight: bold;
 }
 
-.footer {
-  display: block;
-  margin: 0 auto;
+footer {
   margin-top: 20px;
   padding: 5px;
   border-top: 1px solid #aaa;
-  border-bottom: 1px oslid #aaa;
-  text-align: center;
-  font-size: 0.8em;
   color: #aaa;
 }
