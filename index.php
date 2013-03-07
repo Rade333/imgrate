@@ -58,7 +58,10 @@ if ($do == 'delete') {
         <?php include 'inc.message.php'; ?>
         
           <?php $img = selectImages(); ?>
-          <h1 class="title">Rate</h1>
+          <header>
+            <h1 class="title">Rate</h1>
+          </header>
+          
           <p>Below you see two randomly selected images. Choose which you like better by clicking the image. On the Stats-page you can find the ratings of the images.</p>
           
           <ul class="thumbnails">
@@ -76,7 +79,6 @@ if ($do == 'delete') {
           
         </div>
       </div>
-    </div>
 
     <?php include 'inc.footer.php'; ?>
   </body>
