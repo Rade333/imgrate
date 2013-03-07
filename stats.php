@@ -1,15 +1,6 @@
 <?php
 // INCLUDES
 include 'inc.php'; 
-// CONFIG
-
-// Database
-$config[0] = "radefi_imgrate";
-// Image table
-$config[1] = "tbl_images";
-// Votes table
-$config[2] = "tbl_votes";
-
 
 // ACTIONS
 
