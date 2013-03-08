@@ -20,13 +20,13 @@
 
 /* Center list */
 ul.center-list {
-    float: none !important;
-    text-align: center;
+  float: none !important;
+  text-align: center;
 }
 
 ul.center-list > li {
-    float: none !important;
-    display: inline-block;
+  float: none !important;
+  display: inline-block;
 }
 
 ul.center-list > li:first-child {
