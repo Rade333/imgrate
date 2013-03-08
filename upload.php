@@ -75,25 +75,29 @@ if (isset($_POST['submit'])) {
   <body>
     <div class="container-fluid upload text-center">
       <div class="row-fluid">
-        <div class="span12">      
-          <?php include 'inc.nav.php'; ?>
-          <?php include 'inc.message.php'; ?>
-          <header>
-            <h1 class="title">Upload</h1>
+        <div class="span12">
+          <header>    
+            <?php include 'inc.nav.php'; ?>
           </header>
-          <p>Upload an image to be rated. Supported file formats are jpg, jpeg, png and gif.</p>
-          <form action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" id="file" style="display:none">
-            <div class="input-append">
-              <input type="text" id="fileText">
-              <a class="btn" onclick="$('input#file').click();">Browse</a>
-            </div>
-            <div class="control-group">
-              <div class="controls">
-                <button type="submit" name="submit" class="btn btn-primary">Upload</button>
+          
+          <?php include 'inc.message.php'; ?>
+          
+          <article>
+            <h1 class="title">Upload</h1>
+            <p>Upload an image to be rated. Supported file formats are jpg, jpeg, png and gif.</p>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+              <input type="file" name="file" id="file" style="display:none">
+              <div class="input-append">
+                <input type="text" id="fileText">
+                <a class="btn" onclick="$('input#file').click();">Browse</a>
               </div>
-            </div>
-          </form>
+              <div class="control-group">
+                <div class="controls">
+                  <button type="submit" name="submit" class="btn btn-primary">Upload</button>
+                </div>
+              </div>
+            </form>
+          </article>
         </div>
       </div>
       

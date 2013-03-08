@@ -54,29 +54,30 @@ if ($do == 'delete') {
     <div class="container-fluid front text-center">
       <div class="row-fluid">
         <div class="span12">
-        <?php include 'inc.nav.php'; ?>
-        <?php include 'inc.message.php'; ?>
-        
-          <?php $img = selectImages(); ?>
           <header>
-            <h1 class="title">Rate</h1>
+            <?php include 'inc.nav.php'; ?>
           </header>
           
-          <p>Below you see two randomly selected images. Choose which you like better by clicking the image. On the Stats-page you can find the ratings of the images.</p>
+          <?php include 'inc.message.php'; ?>
+          <?php $img = selectImages(); ?>
           
-          <ul class="thumbnails">
-            <li class="span3 offset3">
-              <a href="?do=vote&win=<?php print $img[0]->id; ?>&lose=<?php print $img[1]->id; ?>" title="Vote this image" class="thumbnail">
-                <img src="images/<?php print $img[0]->src; ?>" class="fixed-size">
-              </a>
-            </li>
-            <li class="span3">
-              <a href="?do=vote&win=<?php print $img[1]->id; ?>&lose=<?php print $img[0]->id; ?>" title="Vote this image" class="thumbnail">
-                <img src="images/<?php print $img[1]->src; ?>" class="fixed-size">
-              </a>
-            </li>
-          </ul>
+          <article>
+            <h1 class="title">Rate</h1>          
+            <p>Below you see two randomly selected images. Choose which you like better by clicking the image. On the Stats-page you can find the ratings of the images.</p>
           
+            <ul class="thumbnails">
+              <li class="span3 offset3">
+                <a href="?do=vote&win=<?php print $img[0]->id; ?>&lose=<?php print $img[1]->id; ?>" title="Vote this image" class="thumbnail">
+                  <img src="images/<?php print $img[0]->src; ?>" class="fixed-size">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="?do=vote&win=<?php print $img[1]->id; ?>&lose=<?php print $img[0]->id; ?>" title="Vote this image" class="thumbnail">
+                  <img src="images/<?php print $img[1]->src; ?>" class="fixed-size">
+                </a>
+              </li>
+            </ul>
+          </article>
         </div>
       </div>
 
