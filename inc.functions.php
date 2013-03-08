@@ -182,7 +182,7 @@ function deleteImage($id) {
 }
 
 function currentPage($page) {
-  $curPage = basename($_SERVER['REQUEST_URI'], '.php');
+  $curPage = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
   if ($page == $curPage) {
     $class = 'class="active"';
   }
