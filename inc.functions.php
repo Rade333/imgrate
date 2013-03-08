@@ -131,10 +131,9 @@ function showStats() {
         <div class="thumbnail">
           <img src="images/<?php print $img->src; ?>" alt="">
           <?php if (checkLogin()): ?>
-            <span class="delete"><a href="?do=confirmDelete&id=<?php print $img->id; ?>">Delete</a></span>
+            <p class="delete"><a href="?do=confirmDelete&id=<?php print $img->id; ?>">Delete</a></p>
           <?php endif; ?>
-          <span class="rating">Rating: <?php print $img->rating; ?></span>
-          <span class="wins"><?php print $img->wins + $img->losses; ?> appearances</span>
+          <p class="rating"><strong>Rating: <?php print $img->rating; ?></strong><br><?php print $img->wins + $img->losses; ?> appearances</p>
         </div>
       </li>
     <?php

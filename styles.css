@@ -39,16 +39,19 @@ ul.center-list > li:first-child {
   /*width: 200px;*/
 }
 
-.score-1 {
+.score-1 .rating {
   font-size: 1.5em;
+  line-height: 1.5em;
 }
 
-.score-2 {
+.score-2 .rating {
   font-size: 1.3em;
+  line-height: 1.5em;
 }
 
-.score-3 {
+.score-3 .rating {
   font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 .score img {
@@ -69,16 +72,8 @@ ul.center-list > li:first-child {
 }
 
 .delete,
-.rating, 
-.wins, 
-.losses {
-  display: block;
-  text-align: center;
-  font-size: 0.9em;
-}
-
 .rating {
-  font-weight: bold;
+  font-size: 0.9em;
 }
 
 footer {
