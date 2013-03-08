@@ -8,7 +8,7 @@ function dbConnect($database) {
 }
 
 function checkLogin() {
-  if ($_COOKIE['imgrate_auth'] == 'success') {
+  if (isset($_COOKIE['imgrate_auth']) && $_COOKIE['imgrate_auth'] == 'success') {
     return TRUE;
   }
   else {
@@ -27,8 +27,20 @@ function msgNotAuthorized() {
 
 // Selects randomly two records from database
 function selectImages() {
-  global $config;
-  $img = dbGetImages("SELECT `id` FROM `$config[1]` ORDER BY RAND() LIMIT 2");
+  $img1 = new Image('random');
+  $img2 = new Image('random', $img1->id);
+  $img = array($img1, $img2);
+  return $img;
+}
+
+// Select images from database and create objects
+function dbGetImages($query) {
+  $result = mysql_query($query) or die(mysql_error());
+  $i = 0;
+  while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+    $img[$i] = new Image($row['id']);
+    $i++;
+  }
   return $img;
 }
 
@@ -100,18 +112,7 @@ function setRatings($win, $lose) {
 
 
 function getValue($field) {
-  return $_GET[$field];
-}
-
-// Select images from database and create objects
-function dbGetImages($query) {
-  $result = mysql_query($query) or die(mysql_error());
-  $i = 0;
-  while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-    $img[$i] = new Image($row['id']);
-    $i++;
-  }
-  return $img;
+  return isset($_GET[$field]) ? $_GET[$field] : FALSE;
 }
 
 // Shows current statistics
@@ -182,10 +183,8 @@ function deleteImage($id) {
 
 function currentPage($page) {
   $curPage = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
-  if ($page == $curPage) {
-    $class = 'class="active"';
-  }
-  return $class;
+
+  return ($page == $curPage) ? 'class="active"' : '';
 }
 
 ?>

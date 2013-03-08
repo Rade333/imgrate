@@ -6,7 +6,7 @@ include 'inc.php';
 
 dbConnect($config[0]);
 
-$do = $_GET['do'];
+$do = getValue('do');
 
 // Do: Log out
 if ($do == 'logout') {
@@ -21,28 +21,16 @@ if ($do == 'logout') {
 }
 
 // Do: Vote
-if ($do == 'vote') {
-  // Get images
-  $win = $_GET['win'];
-  $lose = $_GET['lose'];
+if ($do == 'vote' && getValue('win') && getValue('lose')) {
+  // Get image id's
+  $win = getValue('win');
+  $lose = getValue('lose');
 
   // Send vote
   voteImage($win, $lose);
 
   // Set message
   $message = new Message("Vote recorded successfully.", 0);
-}
-
-// Do: confirmDelete
-if ($do == 'confirmDelete') {
-  // Call function and set message
-  $message = new Message(confirmDelete(getValue('id')));
-}
-
-// Do: Delete
-if ($do == 'delete') {
-  // Call function and set message
-  $message = new Message(deleteImage(getValue('id')));
 }
 ?>
 
