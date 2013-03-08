@@ -6,10 +6,10 @@ include 'inc.php';
 
 dbConnect($config[0]);
 
-$do = $_GET['do'];
+$do = getValue('do');
 
 // Do: confirmDelete
-if ($do == 'confirmDelete') {
+if ($do == 'confirmDelete' && getValue('id')) {
   if (checkLogin()) {
     // Call function and set message
     $message = setMessage(confirmDelete(getValue('id')));
@@ -20,7 +20,7 @@ if ($do == 'confirmDelete') {
 }
 
 // Do: Delete
-if ($do == 'delete') {
+if ($do == 'delete' && getValue('id')) {
   if (checkLogin()) {
     // Call function and set message
     $message = setMessage(deleteImage(getValue('id')));
@@ -30,7 +30,6 @@ if ($do == 'delete') {
   }
 }
 
-// Do:
 ?>
 
 
