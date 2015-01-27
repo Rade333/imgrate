@@ -1,3 +1,6 @@
+<b>CAUTION: This app has some serious security issues and can't be relied on
+as is. Use at your own risk :)</b>
+
 imgrate
 =======
 
